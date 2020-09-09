@@ -7,9 +7,12 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct LocationWeatherViewModel {
     var city: String
     var temp: String
     var humidity: String
+    var lat: CLLocationDegrees
+    var long: CLLocationDegrees
 }

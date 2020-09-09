@@ -29,16 +29,16 @@ class MasterViewController: UITableViewController {
 
         getCurrentLocation()
 
-        objects.append(LocationWeatherViewModel(city: "Laval", temp: "0", humidity: "0"))
-        objects.append(LocationWeatherViewModel(city: "Montréal", temp: "0", humidity: "0"))
-        objects.append(LocationWeatherViewModel(city: "Québec", temp: "0", humidity: "0"))
-        objects.append(LocationWeatherViewModel(city: "Vancouver", temp: "0", humidity: "0"))
-        objects.append(LocationWeatherViewModel(city: "Toronto", temp: "0", humidity: "0"))
-        objects.append(LocationWeatherViewModel(city: "Régina", temp: "0", humidity: "0"))
-        objects.append(LocationWeatherViewModel(city: "Saskatoon", temp: "0", humidity: "0"))
-        objects.append(LocationWeatherViewModel(city: "Edmonton", temp: "0", humidity: "0"))
-        objects.append(LocationWeatherViewModel(city: "Ottawa", temp: "0", humidity: "0"))
-        objects.append(LocationWeatherViewModel(city: "Victoria", temp: "0", humidity: "0"))
+        objects.append(LocationWeatherViewModel(city: "Laval", temp: "0", humidity: "0", lat: CLLocationDegrees(45.6066), long: CLLocationDegrees(73.7124)))
+        objects.append(LocationWeatherViewModel(city: "Montréal", temp: "0", humidity: "0", lat: CLLocationDegrees(45.5017), long: CLLocationDegrees(73.5673)))
+        objects.append(LocationWeatherViewModel(city: "Québec", temp: "0", humidity: "0", lat: CLLocationDegrees(46.8139), long: CLLocationDegrees(71.2080)))
+        objects.append(LocationWeatherViewModel(city: "Vancouver", temp: "0", humidity: "0", lat: CLLocationDegrees(49.2827), long: CLLocationDegrees(123.1207)))
+        objects.append(LocationWeatherViewModel(city: "Toronto", temp: "0", humidity: "0", lat: CLLocationDegrees(43.6532), long: CLLocationDegrees(79.3832)))
+        objects.append(LocationWeatherViewModel(city: "Régina", temp: "0", humidity: "0", lat: CLLocationDegrees(50.4452), long: CLLocationDegrees(104.6189)))
+        objects.append(LocationWeatherViewModel(city: "Saskatoon", temp: "0", humidity: "0", lat: CLLocationDegrees(52.1579), long: CLLocationDegrees(106.6702)))
+        objects.append(LocationWeatherViewModel(city: "Edmonton", temp: "0", humidity: "0", lat: CLLocationDegrees(53.5461), long: CLLocationDegrees(113.4938)))
+        objects.append(LocationWeatherViewModel(city: "Ottawa", temp: "0", humidity: "0", lat: CLLocationDegrees(45.4215), long: CLLocationDegrees(75.6972)))
+        objects.append(LocationWeatherViewModel(city: "Victoria", temp: "0", humidity: "0", lat: CLLocationDegrees(48.4284), long: CLLocationDegrees(123.3656)))
 
         tableView.reloadData()
     }
