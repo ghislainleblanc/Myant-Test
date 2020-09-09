@@ -15,6 +15,8 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     var objects = [LocationWeatherViewModel]()
 
+    private var timer: Timer?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,12 +24,6 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count - 1] as! UINavigationController).topViewController as? DetailViewController
         }
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        getCurrentLocation()
 
         objects.append(LocationWeatherViewModel(city: "Laval", temp: "0", humidity: "0", lat: CLLocationDegrees(45.6066), long: CLLocationDegrees(73.7124)))
         objects.append(LocationWeatherViewModel(city: "Montréal", temp: "0", humidity: "0", lat: CLLocationDegrees(45.5017), long: CLLocationDegrees(73.5673)))
@@ -39,6 +35,14 @@ class MasterViewController: UITableViewController {
         objects.append(LocationWeatherViewModel(city: "Edmonton", temp: "0", humidity: "0", lat: CLLocationDegrees(53.5461), long: CLLocationDegrees(113.4938)))
         objects.append(LocationWeatherViewModel(city: "Ottawa", temp: "0", humidity: "0", lat: CLLocationDegrees(45.4215), long: CLLocationDegrees(75.6972)))
         objects.append(LocationWeatherViewModel(city: "Victoria", temp: "0", humidity: "0", lat: CLLocationDegrees(48.4284), long: CLLocationDegrees(123.3656)))
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(updateWeather), userInfo: nil, repeats: true)
+
+        getCurrentLocation()
 
         tableView.reloadData()
     }
@@ -49,6 +53,16 @@ class MasterViewController: UITableViewController {
         locManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         locManager.delegate = self
         locManager.requestLocation()
+    }
+
+    @objc private func updateWeather() {
+        for i in 0...9 {
+            let model = objects[i]
+            retrieveCurrentWeatherAtLat(lat: model.lat, lon: model.long, completion: { [weak self] (jsonDict) in
+                self?.objects[i] = LocationWeatherViewModel(city: model.city, temp: "\(jsonDict?["temp"] ?? "")", humidity: "\(jsonDict?["humidity"] ?? "")", lat: model.lat, long: model.long)
+                self?.tableView.reloadData()
+            })
+        }
     }
 
     // MARK: - Segues
@@ -79,7 +93,7 @@ class MasterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let object = objects[indexPath.row]
-        cell.textLabel!.text = object.city
+        cell.textLabel!.text = "\(object.city) \(object.temp) \(object.humidity)"
         return cell
     }
 }
@@ -91,7 +105,9 @@ extension UITableViewController: CLLocationManagerDelegate {
         }
 
         print("Lat: \(location.coordinate.latitude) Long: \(location.coordinate.longitude)")
-        retrieveCurrentWeatherAtLat(lat: location.coordinate.latitude, lon: location.coordinate.longitude)
+        retrieveCurrentWeatherAtLat(lat: location.coordinate.latitude, lon: location.coordinate.longitude) { (json) in
+
+        }
         getPlace(for: location) { [weak self] (placemark) in
             print(placemark?.locality ?? "")
         }
@@ -101,7 +117,7 @@ extension UITableViewController: CLLocationManagerDelegate {
         print(error)
     }
 
-    private func retrieveCurrentWeatherAtLat(lat: CLLocationDegrees, lon: CLLocationDegrees) {
+    func retrieveCurrentWeatherAtLat(lat: CLLocationDegrees, lon: CLLocationDegrees, completion: @escaping ([String: Any]?) -> Void) {
         let APIKey = "cd64cd14b81e715a84eaf3730c600661"
         let url = "https://api.openweathermap.org/data/2.5/weather?appid=\(APIKey)"
         let params = ["lat": lat, "lon": lon]
@@ -111,6 +127,7 @@ extension UITableViewController: CLLocationManagerDelegate {
             switch response.result {
             case .success(let json):
                 print("Success: \((json as? [String: Any])?["main"] ?? "")")
+                completion((json as? [String: Any])?["main"] as? [String: Any])
             case .failure(let error):
                 print("Error: \(error)")
             }
