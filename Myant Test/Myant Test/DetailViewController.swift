@@ -17,7 +17,7 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let detail = detailItem {
             if let label = detailDescriptionLabel {
-                label.text = detail.city
+                label.text = "City: \(detail.city)\nTemp: \(detail.temp)K\nHumidity: \(detail.humidity)\nPressure: \(detail.pressure)\nSea level pressure: \(detail.seaLevel)"
             }
         }
     }

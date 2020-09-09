@@ -25,16 +25,16 @@ class MasterViewController: UITableViewController {
             detailViewController = (controllers[controllers.count - 1] as! UINavigationController).topViewController as? DetailViewController
         }
 
-        objects.append(LocationWeatherViewModel(city: "Laval", temp: "0", humidity: "0", lat: CLLocationDegrees(45.6066), long: CLLocationDegrees(73.7124)))
-        objects.append(LocationWeatherViewModel(city: "Montréal", temp: "0", humidity: "0", lat: CLLocationDegrees(45.5017), long: CLLocationDegrees(73.5673)))
-        objects.append(LocationWeatherViewModel(city: "Québec", temp: "0", humidity: "0", lat: CLLocationDegrees(46.8139), long: CLLocationDegrees(71.2080)))
-        objects.append(LocationWeatherViewModel(city: "Vancouver", temp: "0", humidity: "0", lat: CLLocationDegrees(49.2827), long: CLLocationDegrees(123.1207)))
-        objects.append(LocationWeatherViewModel(city: "Toronto", temp: "0", humidity: "0", lat: CLLocationDegrees(43.6532), long: CLLocationDegrees(79.3832)))
-        objects.append(LocationWeatherViewModel(city: "Régina", temp: "0", humidity: "0", lat: CLLocationDegrees(50.4452), long: CLLocationDegrees(104.6189)))
-        objects.append(LocationWeatherViewModel(city: "Saskatoon", temp: "0", humidity: "0", lat: CLLocationDegrees(52.1579), long: CLLocationDegrees(106.6702)))
-        objects.append(LocationWeatherViewModel(city: "Edmonton", temp: "0", humidity: "0", lat: CLLocationDegrees(53.5461), long: CLLocationDegrees(113.4938)))
-        objects.append(LocationWeatherViewModel(city: "Ottawa", temp: "0", humidity: "0", lat: CLLocationDegrees(45.4215), long: CLLocationDegrees(75.6972)))
-        objects.append(LocationWeatherViewModel(city: "Victoria", temp: "0", humidity: "0", lat: CLLocationDegrees(48.4284), long: CLLocationDegrees(123.3656)))
+        objects.append(LocationWeatherViewModel(city: "Laval", temp: "0", humidity: "0", lat: CLLocationDegrees(45.6066), long: CLLocationDegrees(73.7124), seaLevel: 0, pressure: 0))
+        objects.append(LocationWeatherViewModel(city: "Montréal", temp: "0", humidity: "0", lat: CLLocationDegrees(45.5017), long: CLLocationDegrees(73.5673), seaLevel: 0, pressure: 0))
+        objects.append(LocationWeatherViewModel(city: "Québec", temp: "0", humidity: "0", lat: CLLocationDegrees(46.8139), long: CLLocationDegrees(71.2080), seaLevel: 0, pressure: 0))
+        objects.append(LocationWeatherViewModel(city: "Vancouver", temp: "0", humidity: "0", lat: CLLocationDegrees(49.2827), long: CLLocationDegrees(123.1207), seaLevel: 0, pressure: 0))
+        objects.append(LocationWeatherViewModel(city: "Toronto", temp: "0", humidity: "0", lat: CLLocationDegrees(43.6532), long: CLLocationDegrees(79.3832), seaLevel: 0, pressure: 0))
+        objects.append(LocationWeatherViewModel(city: "Régina", temp: "0", humidity: "0", lat: CLLocationDegrees(50.4452), long: CLLocationDegrees(104.6189), seaLevel: 0, pressure: 0))
+        objects.append(LocationWeatherViewModel(city: "Saskatoon", temp: "0", humidity: "0", lat: CLLocationDegrees(52.1579), long: CLLocationDegrees(106.6702), seaLevel: 0, pressure: 0))
+        objects.append(LocationWeatherViewModel(city: "Edmonton", temp: "0", humidity: "0", lat: CLLocationDegrees(53.5461), long: CLLocationDegrees(113.4938), seaLevel: 0, pressure: 0))
+        objects.append(LocationWeatherViewModel(city: "Ottawa", temp: "0", humidity: "0", lat: CLLocationDegrees(45.4215), long: CLLocationDegrees(75.6972), seaLevel: 0, pressure: 0))
+        objects.append(LocationWeatherViewModel(city: "Victoria", temp: "0", humidity: "0", lat: CLLocationDegrees(48.4284), long: CLLocationDegrees(123.3656), seaLevel: 0, pressure: 0))
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -59,7 +59,7 @@ class MasterViewController: UITableViewController {
         for i in 0...9 {
             let model = objects[i]
             retrieveCurrentWeatherAtLat(lat: model.lat, lon: model.long, completion: { [weak self] (jsonDict) in
-                self?.objects[i] = LocationWeatherViewModel(city: model.city, temp: "\(jsonDict?["temp"] ?? "")", humidity: "\(jsonDict?["humidity"] ?? "")", lat: model.lat, long: model.long)
+                self?.objects[i] = LocationWeatherViewModel(city: model.city, temp: "\(jsonDict?["temp"] ?? "")", humidity: "\(jsonDict?["humidity"] ?? "")", lat: model.lat, long: model.long, seaLevel: jsonDict?["sea_level"] as! Int, pressure: jsonDict?["grnd_level"] as! Int)
                 self?.tableView.reloadData()
             })
         }

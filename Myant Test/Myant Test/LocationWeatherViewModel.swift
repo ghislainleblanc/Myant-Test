@@ -15,4 +15,6 @@ struct LocationWeatherViewModel {
     var humidity: String
     var lat: CLLocationDegrees
     var long: CLLocationDegrees
+    var seaLevel: Int
+    var pressure: Int
 }
