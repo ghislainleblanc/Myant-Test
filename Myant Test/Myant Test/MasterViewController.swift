@@ -93,7 +93,9 @@ class MasterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let object = objects[indexPath.row]
-        cell.textLabel!.text = "\(object.city) \(object.temp) \(object.humidity)"
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "HH:mm:ss.SSS"
+        cell.textLabel!.text = "\(object.city) \(object.temp) \(object.humidity) \(dateFormatterGet.string(from: Date()))"
         return cell
     }
 }
