@@ -35,16 +35,12 @@ class MasterViewController: UITableViewController {
         objects.append(LocationWeatherViewModel(city: "Edmonton", temp: "0", humidity: "0", lat: CLLocationDegrees(53.5461), long: CLLocationDegrees(113.4938), seaLevel: 0, pressure: 0))
         objects.append(LocationWeatherViewModel(city: "Ottawa", temp: "0", humidity: "0", lat: CLLocationDegrees(45.4215), long: CLLocationDegrees(75.6972), seaLevel: 0, pressure: 0))
         objects.append(LocationWeatherViewModel(city: "Victoria", temp: "0", humidity: "0", lat: CLLocationDegrees(48.4284), long: CLLocationDegrees(123.3656), seaLevel: 0, pressure: 0))
+
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(updateWeather), userInfo: nil, repeats: true)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
-        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(updateWeather), userInfo: nil, repeats: true)
-
-        getCurrentLocation()
-
-        tableView.reloadData()
     }
 
     private func getCurrentLocation() {
