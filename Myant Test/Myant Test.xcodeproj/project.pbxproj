@@ -3,90 +3,94 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		858B69E725091A0D00FC82DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B69E625091A0D00FC82DC /* AppDelegate.swift */; };
-		858B69E925091A0D00FC82DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B69E825091A0D00FC82DC /* SceneDelegate.swift */; };
-		858B69EB25091A0D00FC82DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B69EA25091A0D00FC82DC /* ViewController.swift */; };
-		858B69EE25091A0D00FC82DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858B69EC25091A0D00FC82DC /* Main.storyboard */; };
-		858B69F025091A0F00FC82DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858B69EF25091A0F00FC82DC /* Assets.xcassets */; };
-		858B69F325091A0F00FC82DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858B69F125091A0F00FC82DC /* LaunchScreen.storyboard */; };
-		F296750401333F7CC8DA93FE /* Pods_Myant_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494CA1DD60F1946ADF3C0A27 /* Pods_Myant_Test.framework */; };
+		858B6A0D250932FB00FC82DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B6A0C250932FB00FC82DC /* AppDelegate.swift */; };
+		858B6A0F250932FB00FC82DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B6A0E250932FB00FC82DC /* SceneDelegate.swift */; };
+		858B6A11250932FB00FC82DC /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B6A10250932FB00FC82DC /* MasterViewController.swift */; };
+		858B6A13250932FB00FC82DC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B6A12250932FB00FC82DC /* DetailViewController.swift */; };
+		858B6A16250932FB00FC82DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858B6A14250932FB00FC82DC /* Main.storyboard */; };
+		858B6A18250932FC00FC82DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858B6A17250932FC00FC82DC /* Assets.xcassets */; };
+		858B6A1B250932FC00FC82DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858B6A19250932FC00FC82DC /* LaunchScreen.storyboard */; };
+		AB2FFBD795997C5EA7E57504 /* Pods_Myant_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302AB9549B651564084DF6F7 /* Pods_Myant_Test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		494CA1DD60F1946ADF3C0A27 /* Pods_Myant_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Myant_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		858B69E325091A0D00FC82DC /* Myant Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Myant Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		858B69E625091A0D00FC82DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		858B69E825091A0D00FC82DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		858B69EA25091A0D00FC82DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		858B69ED25091A0D00FC82DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		858B69EF25091A0F00FC82DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		858B69F225091A0F00FC82DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		858B69F425091A0F00FC82DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D945D7D55C003733AFF84B3 /* Pods-Myant Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myant Test.debug.xcconfig"; path = "Target Support Files/Pods-Myant Test/Pods-Myant Test.debug.xcconfig"; sourceTree = "<group>"; };
-		FF21BA6BFF386F927C4F1905 /* Pods-Myant Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myant Test.release.xcconfig"; path = "Target Support Files/Pods-Myant Test/Pods-Myant Test.release.xcconfig"; sourceTree = "<group>"; };
+		302AB9549B651564084DF6F7 /* Pods_Myant_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Myant_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		858B6A09250932FB00FC82DC /* Myant Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Myant Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		858B6A0C250932FB00FC82DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		858B6A0E250932FB00FC82DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		858B6A10250932FB00FC82DC /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		858B6A12250932FB00FC82DC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		858B6A15250932FB00FC82DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		858B6A17250932FC00FC82DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		858B6A1A250932FC00FC82DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		858B6A1C250932FC00FC82DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6D13635FEAD524DB1E52AD7 /* Pods-Myant Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myant Test.release.xcconfig"; path = "Target Support Files/Pods-Myant Test/Pods-Myant Test.release.xcconfig"; sourceTree = "<group>"; };
+		CDAA7942B78D27E7F1B21349 /* Pods-Myant Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myant Test.debug.xcconfig"; path = "Target Support Files/Pods-Myant Test/Pods-Myant Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		858B69E025091A0D00FC82DC /* Frameworks */ = {
+		858B6A06250932FB00FC82DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F296750401333F7CC8DA93FE /* Pods_Myant_Test.framework in Frameworks */,
+				AB2FFBD795997C5EA7E57504 /* Pods_Myant_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		858B69DA25091A0D00FC82DC = {
+		858B6A00250932FB00FC82DC = {
 			isa = PBXGroup;
 			children = (
-				858B69E525091A0D00FC82DC /* Myant Test */,
-				858B69E425091A0D00FC82DC /* Products */,
-				AFC448BEC8CC1E0F5F4EDA5C /* Pods */,
-				B55951A8B62D8CD24C5A1675 /* Frameworks */,
+				858B6A0B250932FB00FC82DC /* Myant Test */,
+				858B6A0A250932FB00FC82DC /* Products */,
+				C1B27DB4CCCF0F4C6E00DB3E /* Pods */,
+				F0277E9CFDAE28FDFEC00206 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		858B69E425091A0D00FC82DC /* Products */ = {
+		858B6A0A250932FB00FC82DC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				858B69E325091A0D00FC82DC /* Myant Test.app */,
+				858B6A09250932FB00FC82DC /* Myant Test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		858B69E525091A0D00FC82DC /* Myant Test */ = {
+		858B6A0B250932FB00FC82DC /* Myant Test */ = {
 			isa = PBXGroup;
 			children = (
-				858B69E625091A0D00FC82DC /* AppDelegate.swift */,
-				858B69E825091A0D00FC82DC /* SceneDelegate.swift */,
-				858B69EA25091A0D00FC82DC /* ViewController.swift */,
-				858B69EC25091A0D00FC82DC /* Main.storyboard */,
-				858B69EF25091A0F00FC82DC /* Assets.xcassets */,
-				858B69F125091A0F00FC82DC /* LaunchScreen.storyboard */,
-				858B69F425091A0F00FC82DC /* Info.plist */,
+				858B6A0C250932FB00FC82DC /* AppDelegate.swift */,
+				858B6A0E250932FB00FC82DC /* SceneDelegate.swift */,
+				858B6A10250932FB00FC82DC /* MasterViewController.swift */,
+				858B6A12250932FB00FC82DC /* DetailViewController.swift */,
+				858B6A14250932FB00FC82DC /* Main.storyboard */,
+				858B6A17250932FC00FC82DC /* Assets.xcassets */,
+				858B6A19250932FC00FC82DC /* LaunchScreen.storyboard */,
+				858B6A1C250932FC00FC82DC /* Info.plist */,
 			);
 			path = "Myant Test";
 			sourceTree = "<group>";
 		};
-		AFC448BEC8CC1E0F5F4EDA5C /* Pods */ = {
+		C1B27DB4CCCF0F4C6E00DB3E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8D945D7D55C003733AFF84B3 /* Pods-Myant Test.debug.xcconfig */,
-				FF21BA6BFF386F927C4F1905 /* Pods-Myant Test.release.xcconfig */,
+				CDAA7942B78D27E7F1B21349 /* Pods-Myant Test.debug.xcconfig */,
+				B6D13635FEAD524DB1E52AD7 /* Pods-Myant Test.release.xcconfig */,
 			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		B55951A8B62D8CD24C5A1675 /* Frameworks */ = {
+		F0277E9CFDAE28FDFEC00206 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				494CA1DD60F1946ADF3C0A27 /* Pods_Myant_Test.framework */,
+				302AB9549B651564084DF6F7 /* Pods_Myant_Test.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -94,15 +98,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		858B69E225091A0D00FC82DC /* Myant Test */ = {
+		858B6A08250932FB00FC82DC /* Myant Test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 858B69F725091A0F00FC82DC /* Build configuration list for PBXNativeTarget "Myant Test" */;
+			buildConfigurationList = 858B6A1F250932FC00FC82DC /* Build configuration list for PBXNativeTarget "Myant Test" */;
 			buildPhases = (
-				AE9289A19B0FED7D8ACA4BF3 /* [CP] Check Pods Manifest.lock */,
-				858B69DF25091A0D00FC82DC /* Sources */,
-				858B69E025091A0D00FC82DC /* Frameworks */,
-				858B69E125091A0D00FC82DC /* Resources */,
-				F4FDF92C29645B4BC0294663 /* [CP] Embed Pods Frameworks */,
+				D9FB5ADD60E0854D81E62A02 /* [CP] Check Pods Manifest.lock */,
+				858B6A05250932FB00FC82DC /* Sources */,
+				858B6A06250932FB00FC82DC /* Frameworks */,
+				858B6A07250932FB00FC82DC /* Resources */,
+				CC446C3B86CA07693CD2D212 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -110,25 +114,25 @@
 			);
 			name = "Myant Test";
 			productName = "Myant Test";
-			productReference = 858B69E325091A0D00FC82DC /* Myant Test.app */;
+			productReference = 858B6A09250932FB00FC82DC /* Myant Test.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		858B69DB25091A0D00FC82DC /* Project object */ = {
+		858B6A01250932FB00FC82DC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = "Leblanc, Ghislain";
 				TargetAttributes = {
-					858B69E225091A0D00FC82DC = {
+					858B6A08250932FB00FC82DC = {
 						CreatedOnToolsVersion = 11.7;
 					};
 				};
 			};
-			buildConfigurationList = 858B69DE25091A0D00FC82DC /* Build configuration list for PBXProject "Myant Test" */;
+			buildConfigurationList = 858B6A04250932FB00FC82DC /* Build configuration list for PBXProject "Myant Test" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -136,31 +140,48 @@
 				en,
 				Base,
 			);
-			mainGroup = 858B69DA25091A0D00FC82DC;
-			productRefGroup = 858B69E425091A0D00FC82DC /* Products */;
+			mainGroup = 858B6A00250932FB00FC82DC;
+			productRefGroup = 858B6A0A250932FB00FC82DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				858B69E225091A0D00FC82DC /* Myant Test */,
+				858B6A08250932FB00FC82DC /* Myant Test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		858B69E125091A0D00FC82DC /* Resources */ = {
+		858B6A07250932FB00FC82DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				858B69F325091A0F00FC82DC /* LaunchScreen.storyboard in Resources */,
-				858B69F025091A0F00FC82DC /* Assets.xcassets in Resources */,
-				858B69EE25091A0D00FC82DC /* Main.storyboard in Resources */,
+				858B6A1B250932FC00FC82DC /* LaunchScreen.storyboard in Resources */,
+				858B6A18250932FC00FC82DC /* Assets.xcassets in Resources */,
+				858B6A16250932FB00FC82DC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AE9289A19B0FED7D8ACA4BF3 /* [CP] Check Pods Manifest.lock */ = {
+		CC446C3B86CA07693CD2D212 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Myant Test/Pods-Myant Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Myant Test/Pods-Myant Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Myant Test/Pods-Myant Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9FB5ADD60E0854D81E62A02 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -182,51 +203,35 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F4FDF92C29645B4BC0294663 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Myant Test/Pods-Myant Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Myant Test/Pods-Myant Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Myant Test/Pods-Myant Test-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		858B69DF25091A0D00FC82DC /* Sources */ = {
+		858B6A05250932FB00FC82DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				858B69EB25091A0D00FC82DC /* ViewController.swift in Sources */,
-				858B69E725091A0D00FC82DC /* AppDelegate.swift in Sources */,
-				858B69E925091A0D00FC82DC /* SceneDelegate.swift in Sources */,
+				858B6A0D250932FB00FC82DC /* AppDelegate.swift in Sources */,
+				858B6A0F250932FB00FC82DC /* SceneDelegate.swift in Sources */,
+				858B6A11250932FB00FC82DC /* MasterViewController.swift in Sources */,
+				858B6A13250932FB00FC82DC /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		858B69EC25091A0D00FC82DC /* Main.storyboard */ = {
+		858B6A14250932FB00FC82DC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				858B69ED25091A0D00FC82DC /* Base */,
+				858B6A15250932FB00FC82DC /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		858B69F125091A0F00FC82DC /* LaunchScreen.storyboard */ = {
+		858B6A19250932FC00FC82DC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				858B69F225091A0F00FC82DC /* Base */,
+				858B6A1A250932FC00FC82DC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -234,7 +239,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		858B69F525091A0F00FC82DC /* Debug */ = {
+		858B6A1D250932FC00FC82DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -294,7 +299,7 @@
 			};
 			name = Debug;
 		};
-		858B69F625091A0F00FC82DC /* Release */ = {
+		858B6A1E250932FC00FC82DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -348,9 +353,9 @@
 			};
 			name = Release;
 		};
-		858B69F825091A0F00FC82DC /* Debug */ = {
+		858B6A20250932FC00FC82DC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D945D7D55C003733AFF84B3 /* Pods-Myant Test.debug.xcconfig */;
+			baseConfigurationReference = CDAA7942B78D27E7F1B21349 /* Pods-Myant Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -367,9 +372,9 @@
 			};
 			name = Debug;
 		};
-		858B69F925091A0F00FC82DC /* Release */ = {
+		858B6A21250932FC00FC82DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF21BA6BFF386F927C4F1905 /* Pods-Myant Test.release.xcconfig */;
+			baseConfigurationReference = B6D13635FEAD524DB1E52AD7 /* Pods-Myant Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -389,25 +394,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		858B69DE25091A0D00FC82DC /* Build configuration list for PBXProject "Myant Test" */ = {
+		858B6A04250932FB00FC82DC /* Build configuration list for PBXProject "Myant Test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				858B69F525091A0F00FC82DC /* Debug */,
-				858B69F625091A0F00FC82DC /* Release */,
+				858B6A1D250932FC00FC82DC /* Debug */,
+				858B6A1E250932FC00FC82DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		858B69F725091A0F00FC82DC /* Build configuration list for PBXNativeTarget "Myant Test" */ = {
+		858B6A1F250932FC00FC82DC /* Build configuration list for PBXNativeTarget "Myant Test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				858B69F825091A0F00FC82DC /* Debug */,
-				858B69F925091A0F00FC82DC /* Release */,
+				858B6A20250932FC00FC82DC /* Debug */,
+				858B6A21250932FC00FC82DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 858B69DB25091A0D00FC82DC /* Project object */;
+	rootObject = 858B6A01250932FB00FC82DC /* Project object */;
 }
