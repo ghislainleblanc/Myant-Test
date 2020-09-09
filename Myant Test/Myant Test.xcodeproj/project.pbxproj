@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		858B6A16250932FB00FC82DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858B6A14250932FB00FC82DC /* Main.storyboard */; };
 		858B6A18250932FC00FC82DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 858B6A17250932FC00FC82DC /* Assets.xcassets */; };
 		858B6A1B250932FC00FC82DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 858B6A19250932FC00FC82DC /* LaunchScreen.storyboard */; };
+		858B6A232509360F00FC82DC /* LocationWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B6A222509360F00FC82DC /* LocationWeatherViewModel.swift */; };
 		AB2FFBD795997C5EA7E57504 /* Pods_Myant_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302AB9549B651564084DF6F7 /* Pods_Myant_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		858B6A17250932FC00FC82DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		858B6A1A250932FC00FC82DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		858B6A1C250932FC00FC82DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		858B6A222509360F00FC82DC /* LocationWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWeatherViewModel.swift; sourceTree = "<group>"; };
 		B6D13635FEAD524DB1E52AD7 /* Pods-Myant Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myant Test.release.xcconfig"; path = "Target Support Files/Pods-Myant Test/Pods-Myant Test.release.xcconfig"; sourceTree = "<group>"; };
 		CDAA7942B78D27E7F1B21349 /* Pods-Myant Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Myant Test.debug.xcconfig"; path = "Target Support Files/Pods-Myant Test/Pods-Myant Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +75,7 @@
 				858B6A17250932FC00FC82DC /* Assets.xcassets */,
 				858B6A19250932FC00FC82DC /* LaunchScreen.storyboard */,
 				858B6A1C250932FC00FC82DC /* Info.plist */,
+				858B6A222509360F00FC82DC /* LocationWeatherViewModel.swift */,
 			);
 			path = "Myant Test";
 			sourceTree = "<group>";
@@ -83,7 +86,6 @@
 				CDAA7942B78D27E7F1B21349 /* Pods-Myant Test.debug.xcconfig */,
 				B6D13635FEAD524DB1E52AD7 /* Pods-Myant Test.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				858B6A0D250932FB00FC82DC /* AppDelegate.swift in Sources */,
+				858B6A232509360F00FC82DC /* LocationWeatherViewModel.swift in Sources */,
 				858B6A0F250932FB00FC82DC /* SceneDelegate.swift in Sources */,
 				858B6A11250932FB00FC82DC /* MasterViewController.swift in Sources */,
 				858B6A13250932FB00FC82DC /* DetailViewController.swift in Sources */,

@@ -13,8 +13,7 @@ import CoreLocation
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    var objects = [Any]()
-
+    var objects = [LocationWeatherViewModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,23 +24,24 @@ class MasterViewController: UITableViewController {
         }
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
-        super.viewWillAppear(animated)
-    }
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         getCurrentLocation()
-    }
 
-//    @objc
-//    func insertNewObject(_ sender: Any) {
-//        objects.insert(NSDate(), at: 0)
-//        let indexPath = IndexPath(row: 0, section: 0)
-//        tableView.insertRows(at: [indexPath], with: .automatic)
-//    }
+        objects.append(LocationWeatherViewModel(city: "Laval", temp: "0", humidity: "0"))
+        objects.append(LocationWeatherViewModel(city: "Montréal", temp: "0", humidity: "0"))
+        objects.append(LocationWeatherViewModel(city: "Québec", temp: "0", humidity: "0"))
+        objects.append(LocationWeatherViewModel(city: "Vancouver", temp: "0", humidity: "0"))
+        objects.append(LocationWeatherViewModel(city: "Toronto", temp: "0", humidity: "0"))
+        objects.append(LocationWeatherViewModel(city: "Régina", temp: "0", humidity: "0"))
+        objects.append(LocationWeatherViewModel(city: "Saskatoon", temp: "0", humidity: "0"))
+        objects.append(LocationWeatherViewModel(city: "Edmonton", temp: "0", humidity: "0"))
+        objects.append(LocationWeatherViewModel(city: "Ottawa", temp: "0", humidity: "0"))
+        objects.append(LocationWeatherViewModel(city: "Victoria", temp: "0", humidity: "0"))
+
+        tableView.reloadData()
+    }
 
     private func getCurrentLocation() {
         let locManager = CLLocationManager()
@@ -56,7 +56,7 @@ class MasterViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! NSDate
+                let object = objects[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
@@ -78,8 +78,8 @@ class MasterViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
+        let object = objects[indexPath.row]
+        cell.textLabel!.text = object.city
         return cell
     }
 }
@@ -92,7 +92,7 @@ extension UITableViewController: CLLocationManagerDelegate {
 
         print("Lat: \(location.coordinate.latitude) Long: \(location.coordinate.longitude)")
         retrieveCurrentWeatherAtLat(lat: location.coordinate.latitude, lon: location.coordinate.longitude)
-        getPlace(for: location) { (placemark) in
+        getPlace(for: location) { [weak self] (placemark) in
             print(placemark?.locality ?? "")
         }
     }
