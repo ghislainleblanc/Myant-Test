@@ -40,12 +40,33 @@ class ViewController: UIViewController {
             print("Got response from server: \(response)")
             switch response.result {
             case .success(let json):
-                print("Success: \(json)") //test
+                print("Success: \((json as? [String: Any])?["main"] ?? "")")
             case .failure(let error):
                 print("Error: \(error)")
             }
         }
         request.resume()
+    }
+
+    private func getPlace(for location: CLLocation, completion: @escaping (CLPlacemark?) -> Void) {
+
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(location) { placemarks, error in
+
+            guard error == nil else {
+                print("*** Error in \(#function): \(error!.localizedDescription)")
+                completion(nil)
+                return
+            }
+
+            guard let placemark = placemarks?[0] else {
+                print("*** Error in \(#function): placemark is nil")
+                completion(nil)
+                return
+            }
+
+            completion(placemark)
+        }
     }
 }
 
@@ -57,6 +78,9 @@ extension ViewController: CLLocationManagerDelegate {
 
         print("Lat: \(location.coordinate.latitude) Long: \(location.coordinate.longitude)")
         retrieveCurrentWeatherAtLat(lat: location.coordinate.latitude, lon: location.coordinate.longitude)
+        getPlace(for: location) { (placemark) in
+            print(placemark?.locality ?? "")
+        }
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
